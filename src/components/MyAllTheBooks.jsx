@@ -7,6 +7,7 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 const MyAllTheBooks = (props) => {
+  console.log(props)
   return props.category.map((book) => {
     return (
       <Card

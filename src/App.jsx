@@ -3,7 +3,7 @@ import "./App.scss";
 import MyNavbar from "./components/MyNavbar";
 import MyFooter from "./components/MyFooter";
 import MyWelcome from "./components/MyWelcome";
-import MyAllTheBooks from "./components/MyAllTheBooks";
+// import MyAllTheBooks from "./components/MyAllTheBooks";
 import scifi from "../src/data/scifi.json";
 import romance from "../src/data/romance.json";
 import history from "../src/data/history.json";
@@ -11,7 +11,7 @@ import horror from "../src/data/horror.json";
 import fantasy from "../src/data/fantasy.json";
 import { Dropdown } from "react-bootstrap";
 import { Component } from "react";
-import MySingleBook from "./components/MySingleBook";
+import MyBookList from "./components/MyBookList";
 
 class App extends Component {
   state = { category: scifi };
@@ -78,9 +78,15 @@ class App extends Component {
         {/* <div className="card-container">
           <MyAllTheBooks category={this.state.category} />
         </div> */}
+
         <div className="card-container">
-          <MySingleBook category={this.state.category} />
+          <MyBookList category={this.state.category} />
         </div>
+
+        {/* { console.log(this.state.category[0])} */}
+        {/* <div className="card-container">
+          <MySingleBook category={this.state.category[0]} />
+        </div> */}
 
         <MyFooter />
       </div>
